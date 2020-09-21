@@ -10,20 +10,29 @@ You can find configuration variables for the deployemnt in the file `shell/confi
 
 ### Requirements
 You need install the next binaries:
-- azure cli (ver2.11.1 or greater)
-- kubectl (ver1.18 or greater)
-- helm (ver3 or greater)
-- jq (ver1.5.1 or greater)
+- `azure cli` (ver2.11.1 or greater)
+- `kubectl` (ver1.18 or greater)
+- `helm` (ver3 or greater)
+- `jq` (ver1.5.1 or greater)
+
+### Azure Credentials
+Your account has access to the following services:
+- services principal creation and role assigment
+- create vnet
+- create aks
+- create azure database for mysql
 
 ### Install
 
 ```
+az login
 cd shell
 ./main.sh
 ```
 
 ## Tear down
 ```
+az login
 cd shell
 ./destroy.sh
 ```
